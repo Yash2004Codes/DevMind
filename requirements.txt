@@ -1,0 +1,60 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# DevMind Multi-Agent MCP — Python Dependencies
+# Tested on Python 3.10 / 3.11 / 3.12
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Groq API (LLM — Llama 3.1 70B — completely FREE) ─────────────────────────
+# Sign up at console.groq.com — no credit card needed
+groq>=0.9.0
+
+# ── LangChain — Groq integration ─────────────────────────────────────────────
+langchain-groq>=0.1.0
+
+# ── Local Embeddings (sentence-transformers — free, runs on CPU) ──────────────
+# all-MiniLM-L6-v2: 384-dim vectors, ~90MB download, cached after first run
+sentence-transformers>=3.0.0
+
+# ── LangChain core ────────────────────────────────────────────────────────────
+langchain>=0.2.0
+langchain-core>=0.2.0
+
+# ── LangChain — community (HuggingFaceEmbeddings wrapper) ────────────────────
+langchain-community>=0.2.0
+
+# ── LangGraph — multi-agent orchestration ─────────────────────────────────────
+# StateGraph, conditional edges, fan-out/fan-in patterns used by orchestrator
+langgraph>=0.2.0
+
+# ── MCP SDK — Model Context Protocol server ────────────────────────────────────
+# FastMCP wraps the MCP protocol; provides @mcp.tool() decorator and stdio transport
+mcp[cli]>=1.0.0
+
+# ── GitHub API ────────────────────────────────────────────────────────────────
+# PyGithub provides pythonic access to GitHub REST API v3
+# Used by CodeAgent and IssueAgent for repo indexing
+PyGithub>=2.0.0
+
+# ── Database driver ───────────────────────────────────────────────────────────
+psycopg2-binary>=2.9.9
+
+# ── ORM / SQL layer ───────────────────────────────────────────────────────────
+sqlalchemy>=2.0.30
+
+# ── pgvector Python adapter ───────────────────────────────────────────────────
+pgvector>=0.2.5
+
+# ── Environment variable management ──────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── Terminal UI ───────────────────────────────────────────────────────────────
+rich>=13.7.0
+
+# ── Python 3.10 compatibility shim ───────────────────────────────────────────
+typing-extensions>=4.9.0
+
+# ── HTTP client (used by GitHub API internally) ───────────────────────────────
+httpx>=0.27.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-timeout>=2.3.0
